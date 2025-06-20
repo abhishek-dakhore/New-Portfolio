@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Dakhore Clone</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: linear-gradient(45deg, #bb40ab, #e2d6df); /* Pink to White */
+      color: #121212;
+      overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    header {
+      background: #ffffff71;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+
+    .logo {
+      font-size: 22px;
+      color: #00adb5;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: rgb(8, 7, 7);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00adb5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1e1e1e;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    marquee {
+      display: block;
+      margin-top: 60px; /* below fixed header */
+      background: #ffffff44;
+      color: #050505;
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    main {
+      min-height: calc(100vh - 160px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .btn {
+      background: #00adb5;
+      padding: 10px 25px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    #visit-count {
+      margin-top: 20px;
+      color: #00adb5;
+    }
+
+    footer {
+      background: #ffffffb0;
+      padding: 20px;
+      text-align: center;
+      color: #050503;
+      
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Welcome</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+<br>
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    🟢 Hello Everyone! This is Abhishek Dakhore. Please share your suggestions through the Contact section.
+  </marquee>
+
+  <main>
+    <div>
+      <img src="picture.png" height="340px" width="350px" alt="Abhishek Picture"/>
+      <h1>Hello, I'm <span style="color: #ffffffcb;">Abhishek Pramila Baban Dakhore</span></h1>
+      <p>Full Stack Developer | Data Scientist| Android Developer</p>
+      <p>a Computer Science student with a strong interest in Frontend Development and UI/UX Design. I'm building this portfolio as part of my college project and to showcase my skills for internship opportunities. I enjoy crafting responsive, user-friendly web interfaces using HTML, CSS, JavaScript, and jQuery, and I'm always eager to learn and grow in the field of web development.</p>
+      <a href="portfolio.html" class="btn">View My Work</a>
+      <p id="visit-count">Visitors: Loading...</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Abhishek Dakhore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    // Real-time visit count using CountAPI
+    fetch('https://api.countapi.xyz/hit/abhishek-portfolio.dev/home')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('visit-count').textContent = 'Visitors: ' + data.value;
+      });
+  </script>
+</body>
+
+</html>

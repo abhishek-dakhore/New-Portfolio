@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Abhishek</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(45deg, #bb40ab, #fdfdfd);
+      animation: gradientShift 15s ease infinite;
+      color: #fff;
+    }
+
+
+    header {
+      background: rgba(255, 255, 255, 0.753);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00ffc8;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(8, 7, 7);
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00ffc8;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1e1e1e;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(9, 10, 10, 0.2);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 600px;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      border-bottom: 2px solid #00ffc8;
+      color: #000000;
+      font-size: 1rem;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #000000;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #000000;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #ffffff9c;
+      color: #121212;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #00cbb7;
+    }
+    .social-links {
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: #040505;
+  font-size: 50px;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+
+    footer {
+      background: rgba(255, 255, 255, 0.699);
+      padding: 20px;
+      text-align: center;
+      color: #888;
+      box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <form action="https://formsubmit.co/abdakhore@gmail.com" method="POST">
+      <h1>Contact me</h1>
+      <input type="text" name="name" placeholder="Your Good Name" required /><br/><br/>
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Valuable Suggestion Please" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <br>
+   
+
+  </main>
+ <div class="social-links">
+  <a href="https://github.com/abhishek-dakhore" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://instagram.com/abhi_dakhore_45" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://wa.me/919325608257" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+  <footer>
+    <p>&copy; 2025 Abhishek Dakhore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>

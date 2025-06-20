@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Abhishek</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #f0f0f0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: bgAnim 20s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgAnim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 255, 255, 0.2);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00adb5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00adb5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1e1e1e;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+      nav ul.open {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00adb5;
+      margin-bottom: 30px;
+    }
+
+    .skills-grid, .skilled {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    .skill {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1);
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+      background: #222;
+    }
+
+    .skill i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      display: block;
+      color: #00adb5;
+    }
+
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      background: #1c1c1c;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table thead {
+      background: #00adb5;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      color: #f0f0f0;
+    }
+
+    th {
+      font-weight: 600;
+      color: #000;
+    }
+
+    tr:nth-child(even) {
+      background: #2b2b2b;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Language Known</h1>
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-html5"></i>HTML5</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i>CSS3</div>
+      <div class="skill"><i class="fab fa-js-square"></i>JavaScript</div>
+      <div class="skill"><i class="fab fa-jquery"></i>jQuery</div>
+      <div class="skill"><i class="fab fa-react"></i>React</div>
+      <div class="skill"><i class="fab fa-node-js"></i>Node.js</div>
+      <div class="skill"><i class="fab fa-python"></i>Python</div>
+      <div class="skill"><i class="fas fa-database"></i>MySQL / SQL</div>
+      <div class="skill"><i class="fab fa-php"></i>PHP</div>
+      <div class="skill"><i class="fas fa-fire"></i>Firebase</div>
+      <div class="skill"><i class="fab fa-java"></i>Java</div>
+      <div class="skill"><i class="fas fa-code"></i>XML</div>
+      <div class="skill"><i class="fas fa-laptop-code"></i>Android Studio</div>
+      <div class="skill"><i class="fas fa-copyright"></i>C</div>
+      <div class="skill"><i class="fas fa-copyright"></i>C++</div>
+      <div class="skill"><i class="fab fa-microsoft"></i>C#</div>
+      <div class="skill"><i class="fab fa-git-alt"></i>Git & GitHub</div>
+    </div>
+
+    <h1>Education & Status</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Education</th>
+          <th>Status</th>
+          <th>Institution</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Masters in Computer Application</td>
+          <td>Pursuing</td>
+          <td>University Department of Management Science, chh. Sambhajinagar</td>
+          <td>2025</td>
+        </tr>
+        <tr>
+          <td>Bachelor in Computer Application</td>
+          <td>Completed</td>
+          <td>R. A. Science College Washim</td>
+          <td>2023</td>
+        </tr>
+        <tr>
+          <td>HSC (12th Grade)</td>
+          <td>Completed</td>
+          <td>R. A. Science College Washim</td>
+          <td>2020</td>
+        </tr>
+        <tr>
+          <td>SSC (10th Grade)</td>
+          <td>Completed</td>
+          <td>Yashwantrao Chavhan Military School Supkhela, Washim</td>
+          <td>2018</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Additional Courses</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Status</th>
+          <th>Institution</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data Science</td>
+          <td>Pursuing</td>
+          <td>Study IQ Delhi</td>
+        </tr>
+        <tr>
+          <td>Data Analytics</td>
+          <td>Pursuing</td>
+          <td>Study IQ Delhi</td>
+        </tr>
+        <tr>
+          <td>Internship</td>
+          <td>Pursuing</td>
+          <td>Unified Mentor, Gurugram Haryana</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>I'm Able To</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>What</th>
+          <th>Description</th>
+          <th>Field</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Android App</td>
+          <td>Able to Build Complete Android Application</td>
+          <td>Android Studio, Java, Kotlin, XML</td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>Able To Build complete functional responsive Website</td>
+          <td>MERN Stack & HTML, CSS, JavaScript, PHP, MySQL</td>
+        </tr>
+        <tr>
+          <td>Cyber Security</td>
+          <td>Networking</td>
+          <td>Using Kali Linux, Python</td>
+        </tr>
+        <tr>
+          <td>Software Testing</td>
+          <td>Able to Perform Black Box as well as White Box Testing</td>
+          <td>Based on Project Structured Language</td>
+        </tr>
+        <tr>
+          <td>System Design</td>
+          <td>Able to Design Complete System</td>
+          <td>Using Class, Activity, Use Case, Sequence Diagrams etc.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Soft Skills</h1>
+    <div class="skilled">
+      <div class="skill">✔️ Effective Communication</div>
+      <div class="skill">✔️ Problem Solving & Debugging</div>
+      <div class="skill">✔️ Team Collaboration</div>
+      <div class="skill">✔️ Time Management</div>
+      <div class="skill">✔️ Leadership & Initiative</div>
+      <div class="skill">✔️ Attention to Detail</div>
+      <div class="skill">✔️ Adaptability to New Tech</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Abhishek Dakhore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

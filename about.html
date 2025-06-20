@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Abhishek</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ffdee9, #b5f0ff, #f3ffe2, #8d06cc);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.589);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00adb5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(5, 5, 5);
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00adb5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1e1e1e;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      flex: 1;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #00adb5;
+      margin: 30px 0 20px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      max-width: 90%;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: #007e87;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    footer {
+      background: rgba(26, 26, 26, 0.95);
+      padding: 20px;
+      text-align: center;
+      color: #ccc;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+    <div class="card-container">
+      <!-- Insert your card sections here as they were in your existing code -->
+      <div class="card">
+        <h2>My Vision</h2>
+        <p>My vision is to become a skilled Data Scientist or AI Engineer within the next two years. I aim to contribute meaningfully to India's growth in technology while also promoting digital literacy in rural areas.</p>
+      </div>
+      <div class="card">
+        <h2>My Mission</h2>
+        <p>My mission is to learn emerging technologies, gain hands-on experience through internships, and grow with organizations that value ethics and innovation.</p>
+      </div>
+      <div class="card">
+        <h2>My Goal</h2>
+        <p>To secure a reputed role in the tech industry and use my skills to build impactful solutions while staying committed to lifelong learning.</p>
+      </div>
+            <h1>Personal Touch</h1>
+      <div class="card">
+        <h2>My Family</h2>
+        <p>
+          “A strong family bond is built on unconditional love, trust, support, and mutual respect. In a closely
+          connected family, every member feels safe, valued, and heard. No matter how busy life becomes, a strong family
+          always makes time for one another — to celebrate successes, share struggles, and grow together. It’s this
+          emotional strength and foundation that shapes an individual's character, values, and resilience. For me, my
+          family is not just my support system, but also my source of inspiration and strength, guiding me in every
+          phase of life.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Friends Circle</h2>
+        <p>
+          "My friends circle is a small group of people who understand me, support my goals, and make every moment
+          enjoyable. Together, we share ideas, challenges, and lots of fun — growing stronger with each step.
+          Introducing My Closely Friends are Kailas Devkar, Dnyaneshwar Jamkar, Nitin Dakhore, Nilesh Jatale, Avinash
+          Devkar, Santosh Hande, Rameshwar Ambhore, Pramod Jawale, Swagat Girhe, Niwas Zyate these all are friends which
+          i deeply connect with those hearts, Thank you to all my friends"
+        </p>
+      </div>
+      <br>
+      <h1>Hobbies</h1>
+      <br>
+      <div class="card">
+        <h2>Cricket</h2>
+        <p>
+          "One of my favorite hobbies is playing cricket. It not only keeps me active and fit, but also teaches me
+          teamwork, discipline, and strategic thinking."
+      </div>
+      <div class="card">
+        <h2>Filming & Photo Shoot</h2>
+        <p>
+          "Filming and doing photo shoots is a creative hobby I enjoy, allowing me to see the world from unique angles
+          and preserve memorable moments."
+      </div>
+      <div class="card">
+        <h2>19s Old Songs</h2>
+        <p>
+          "I love listening to old songs; they connect me to emotions and stories from the past in a soothing way."
+      </div>
+      <div class="card">
+        <h2>Strength</h2>
+        <p>
+          "I am highly goal-oriented and determined — once I set a goal, I stay committed to achieving it at any cost
+          with full dedication and focus."
+      </div>
+      <div class="card">
+        <h2>Weakness</h2>
+        <p>
+          "Sometimes, my silence becomes both my weakness and strength. While being gentle and calm helps in difficult
+          situations, it can also be misunderstood in moments that require strong expression."
+      </div>
+      <div class="card">
+        <h2>Observer</h2>
+        <p>
+          "I have a strong observational ability — I naturally notice details, remember them clearly, and analyze
+          situations deeply. Whether it’s social behavior or coding logic, I’m able to identify what’s good or bad and
+          quickly think of practical solutions."
+      </div>
+      <div class="card">
+        <h2>Thought about Social Society</h2>
+        <p>
+          "I believe in giving back to society by staying connected with people and helping where I can. Whether it’s
+          spreading digital awareness, guiding someone in need, or volunteering for small community tasks — I find true
+          purpose in supporting others. As a student and future professional, I aim to use my knowledge and skills to
+          create a positive impact and contribute to building a more informed, inclusive, and connected society."
+      </div>
+      <div class="card">
+        <h2>Love for Children</h2>
+        <p>
+          "Children bring light and happiness into life, and I truly enjoy being around them, learning from their
+          simplicity and sharing smiles."</p>
+      </div>
+      <div class="card">
+        <h2>Love for Nation, Soldiers, & Farmers</h2>
+        <p>
+          "I hold a deep and unwavering love for my nation, India. The rich culture, history, and unity in diversity
+          inspire me every day. I feel immense respect for our soldiers — the true guardians of our freedom — who
+          sacrifice their comfort and lives to protect our borders selflessly. Equally, I salute our farmers, the
+          backbone of our country, who work tirelessly in all seasons to feed the nation. Their dedication, discipline,
+          and resilience fuel my desire to contribute to India's growth in my own way — by being a responsible citizen,
+          learning modern skills, and helping create awareness and development at every level of society."</p>
+      </div>
+      <div class="card">
+        <h2>My Motto</h2>
+        <p>
+          True progress doesn’t need to be announced — it becomes visible over time </p>
+      </div>
+      <div class="card">
+        <h2>Believed</h2>
+        <p>
+          By my perspective, "success is a one thing that never be end over the life journey" </p>
+      </div>
+      <br>
+      <h1>Interest</h1><br>
+      <div class="card">
+        <h2>Technology</h2>
+        <p>
+          "I have a strong passion for exploring innovative technologies that shape the future — from AI and data
+          science to smart automation and digital tools. I enjoy staying updated with emerging trends and learning how
+          they can solve real-world problems and improve lives."</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Abhishek Dakhore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
